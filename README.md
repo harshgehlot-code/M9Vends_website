@@ -1,7 +1,4 @@
-Below is your **README.md in pure Markdown format**.
-Copy everything and paste it directly into your GitHub `README.md` file.
 
----
 
 ```md
 # M9Vends Website – MERN Full-Stack Company Website
@@ -53,9 +50,8 @@ This project includes a responsive frontend UI and a scalable backend API archit
 ---
 
 ## 📂 Project Structure
-
 ```
-
+```md
 M9Vends_website/
 │
 ├── Backend/
@@ -185,3 +181,4 @@ Developed a full-stack corporate website using the MERN stack with scalable REST
 
 ::contentReference[oaicite:0]{index=0}
 ```
+
