@@ -1,0 +1,192 @@
+
+/* Tailwind v4 base imports */
+@import "tailwindcss";
+
+/* ===============================
+   M9VENDS DESIGN TOKENS (GLOBAL)
+   =============================== */
+:root {
+  --machineBlue: #226fb2;   /* Deep Machine Blue */
+  --m9-teal: #77dec6;   /* Automation Teal */
+  --m9-accent: #00F8F0; /* CTA Lime Accent */
+  --m9-white: #ffffff;
+  --m9-dark: #0b1c2d;   /* Industrial dark */
+}
+
+/* ===============================
+   BASE RESET + GLOBAL STYLE
+   =============================== */
+* {
+  box-sizing: border-box;
+  border-color: rgba(0, 139, 209, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--m9-white);
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--m9-white);
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* ===============================
+   TYPOGRAPHY INDUSTRIAL STYLE
+   =============================== */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--m9-blue);
+}
+
+/* ===============================
+   INDUSTRIAL UI ANIMATIONS
+   =============================== */
+
+/* subtle machine boot-up effect */
+@keyframes machineBoot {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* horizontal panel slide */
+@keyframes panelSlide {
+  from { transform: translateX(-12px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* signal blink (for CTA indicators) */
+@keyframes signalBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* automation pulse */
+@keyframes automationPulse {
+  0% { box-shadow: 0 0 0 rgba(0, 248, 240, 0); }
+  50% { box-shadow: 0 0 18px rgba(0, 248, 240, 0.7); }
+  100% { box-shadow: 0 0 0 rgba(0, 248, 240, 0); }
+}
+
+/* ===============================
+   UTILITY CLASSES
+   =============================== */
+.m9-boot {
+  animation: machineBoot 0.4s ease-out forwards;
+}
+
+.m9-panel {
+  animation: panelSlide 0.35s ease-out forwards;
+}
+
+.m9-signal {
+  animation: signalBlink 1.2s linear infinite;
+}
+
+.m9-pulse {
+  animation: automationPulse 2.5s ease-in-out infinite;
+}
+
+/* ===============================
+   SCROLLBAR INDUSTRIAL STYLE
+   =============================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--m9-blue);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006fa8;
+}
+
+/* ===============================
+   GLOBAL LAYOUT FIXES
+   =============================== */
+main {
+  min-height: 100vh;
+}
+
+/* Fixed navbar offset support */
+body.has-navbar {
+  padding-top: 72px;
+}
+
+/* ===============================
+   CARD + PANEL STYLE PRESETS
+   =============================== */
+.m9-card {
+  background: var(--m9-teal);
+  border: 1px solid rgba(0, 139, 209, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+  border:3px solid rgba(2, 4, 4, 0.3);
+}
+
+
+
+.m9-panel-header {
+  background: var(--m9-blue);
+  color: white;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   CTA BUTTON GLOW (LIMITED USE)
+   =============================== */
+.m9-cta {
+  background: var(--m9-accent);
+  color: #001314;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  
+}
+
+.m9-cta:hover {
+  box-shadow: 0 0 22px rgba(0, 248, 240, 0.7);
+  transform: translateY(-1px);
+}
+
+
+/* Section background presets */
+.section-blue {
+  background: linear-gradient(180deg, #008BD1 0%, #006fa8 100%);
+  color: white;
+}
+
+.section-teal {
+  background: linear-gradient(180deg, #6BD825 0%, #4fb015 100%);
+  color: #0b1c2d;
+}
+
+.section-white {
+  background: #ffffff;
+  color: #0b1c2d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
