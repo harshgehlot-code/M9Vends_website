@@ -179,6 +179,3 @@ Developed a full-stack corporate website using the MERN stack with scalable REST
 ```
 
 
-::contentReference[oaicite:0]{index=0}
-```
-
